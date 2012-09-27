@@ -7,7 +7,8 @@ function ready(){
 	
 	actor.addEventListener("touchmove",function(){
 	tch = event.touches[0];
-	actor.style.webkitTransform = "translate3D(" + tch.pageX + "px," + tch.pageY + "px,0px)";
+	tr = "translate(" + tch.pageX + "px," + tch.pageY + "px)";
+	actor.style.webkitTransform = tr;
 	},false);
 	//actor.addEventListener("touchEnd",onrelease(event),false);
 	}
