@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head></head>
+<script>
+var actor;
+function ready(){
+	actor = document.getElementById("actor");
+	
+	actor.addEventListener("touchmove",function(){
+	tch = event.touches[0];
+	actor.style.webkitTransform = "translate3D(" + tch.pageX + "px," + tch.pageY + "px,0px)";
+	},false);
+	//actor.addEventListener("touchEnd",onrelease(event),false);
+	}
+	
+
+
+</script>
+
+
+<style>
+body {
+	margin:0px;
+	padding:5px
+	}
+	
+div {
+	margin-left:7px;
+	overflow:hidden;
+	}
+	
+#actor {
+	width:50px;
+	height:50px;
+
+	padding:5px;
+	background-color:orange;
+	
+	
+	-webkit-transition: width 2s;
+	-webkit-transform-origin: 50px,50px;
+	}
+
+
+</style>
+<body onLoad="ready()">
+<div id="actor">blah blah blah</div>
+</body>
+</html>
